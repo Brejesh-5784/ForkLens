@@ -1,4 +1,4 @@
-# 🚀 ForkLens Quick Start Guide
+# 🚀 ForkLens Quick Start guide
 
 Get ForkLens running in 5 minutes!
 
