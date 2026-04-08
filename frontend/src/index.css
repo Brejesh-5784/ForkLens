@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --bg-primary: #0A0E14;
+  --accent-gold: #C8A84B;
+  --glass-bg: rgba(22, 27, 34, 0.4);
+  --glass-border: rgba(200, 168, 75, 0.1);
+  
+  /* Emotion Mirror Glow Colors - Cinematic & Intense */
+  --glow-neutral: rgba(200, 168, 75, 0.2);
+  --glow-fear: rgba(138, 43, 226, 0.25);     /* Royal Violet */
+  --glow-joy: rgba(255, 215, 0, 0.25);       /* Bright Gold */
+  --glow-sadness: rgba(70, 130, 180, 0.25);  /* Steel Blue */
+  --glow-anger: rgba(220, 20, 60, 0.25);     /* Crimson */
+  --glow-confusion: rgba(32, 178, 170, 0.25); /* Teal */
+  
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-[#0A0E14] text-[#f0ead8] font-sans antialiased overflow-x-hidden;
+  margin: 0;
+  /* Cinematic Midnight Gradient */
+  background: radial-gradient(circle at 50% 50%, #161B22 0%, #0A0E14 100%);
+}
+
+/* Atmospheric Noise Overlay */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* Ethereal Heartbeat Glow - Intense Midnight */
+.glow-threshold {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 70vh;
+  background: radial-gradient(circle, rgba(200, 168, 75, 0.08) 0%, transparent 70%);
+  filter: blur(90px);
+  animation: heartbeat 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes heartbeat {
+  0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* Qdrant Constellation Points */
+.constellation {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.constellation::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, #C8A84B 0.5px, transparent 0.5px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black 0%, transparent 80%);
+  opacity: 0.15;
+}
+
+
+/* High-End Dark Glassmorphism */
+.glass {
+  background: rgba(22, 27, 34, 0.4);
+  backdrop-filter: blur(40px) saturate(120%);
+  -webkit-backdrop-filter: blur(40px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.5);
+}
+
+.gold-foiled {
+  background: linear-gradient(135deg, #f0ead8 0%, #C8A84B 50%, #f0ead8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shine 12s linear infinite;
+  @apply font-serif;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+.assistant-bubble {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 2px solid var(--accent-gold);
+  @apply text-[#f0ead8] rounded-[2.5rem] rounded-bl-sm p-8 leading-relaxed text-base shadow-2xl font-serif italic;
+}
+
+.user-bubble {
+  @apply bg-[#C8A84B] text-[#0A0E14] font-black rounded-[2rem] rounded-br-sm p-6 text-sm uppercase tracking-widest;
+  box-shadow: 0 0 30px -10px rgba(200, 168, 75, 0.3);
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #12120e;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a1e;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@layer utilities {
+  .text-glow-gold {
+     text-shadow: 0 0 15px rgba(182, 146, 46, 0.15);
+  }
+  .shadow-glow-amber-sm {
+    box-shadow: 0 0 25px -5px rgba(182, 146, 46, 0.1);
+  }
+  .shadow-glow-amber-lg {
+    box-shadow: 0 0 50px -10px rgba(182, 146, 46, 0.2);
+  }
+}

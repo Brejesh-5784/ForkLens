@@ -1,0 +1,115 @@
+# ===============================================
+# ForkLens - Literary Counseling System
+# ===============================================
+
+# Large Files (GitHub 100MB limit)
+# ===============================================
+final_models/           # 1.8GB - Emotion detection models
+gutenberg_books_text/   # 23MB - Literary source texts
+*.bin                   # Model binary files
+*.safetensors          # Model weight files
+*.h5                   # Keras model files
+*.pkl                  # Pickle files
+*.joblib               # Joblib files
+
+# Sensitive Configuration
+# ===============================================
+.env                   # API keys and secrets
+*.key                  # Private keys
+*.pem                  # Certificates
+config.json           # May contain sensitive data
+
+# Python Environment
+# ===============================================
+venv/                  # Virtual environment
+env/                   # Alternative venv name
+__pycache__/          # Python cache
+
+# Node.js / Frontend
+# ===============================================
+node_modules/         # Node.js dependencies
+*.pyc                 # Compiled Python
+*.pyo                 # Optimized Python
+*.pyd                 # Python extension
+.Python               # Python symlink
+pip-log.txt           # Pip logs
+pip-delete-this-directory.txt
+
+# Development Tools
+# ===============================================
+.pytest_cache/        # Pytest cache
+.coverage             # Coverage reports
+.coverage.*           # Coverage data
+.cache/               # General cache
+.mypy_cache/          # MyPy cache
+.hypothesis/          # Hypothesis cache
+htmlcov/              # Coverage HTML
+.tox/                 # Tox testing
+nosetests.xml         # Nose test results
+coverage.xml          # Coverage XML
+
+# Jupyter Notebooks
+# ===============================================
+.ipynb_checkpoints/   # Notebook checkpoints
+*-checkpoint.ipynb    # Checkpoint files
+
+# IDE and Editors
+# ===============================================
+.vscode/              # VS Code settings
+.idea/                # PyCharm settings
+*.swp                 # Vim swap files
+*.swo                 # Vim swap files
+*~                    # Backup files
+.spyderproject        # Spyder project
+.spyproject           # Spyder project
+
+# Operating System
+# ===============================================
+.DS_Store             # macOS folder settings
+.DS_Store?            # macOS folder settings
+._*                   # macOS resource forks
+.Spotlight-V100       # macOS Spotlight
+.Trashes              # macOS trash
+ehthumbs.db          # Windows thumbnails
+Thumbs.db            # Windows thumbnails
+desktop.ini          # Windows folder settings
+
+# Logs and Temporary Files
+# ===============================================
+*.log                 # Log files
+*.tmp                 # Temporary files
+*.temp                # Temporary files
+logs/                 # Log directory
+temp/                 # Temp directory
+
+# Database Files
+# ===============================================
+*.db                  # SQLite databases
+*.sqlite              # SQLite databases
+*.sqlite3             # SQLite databases
+
+# Backup Files
+# ===============================================
+*.bak                 # Backup files
+*.backup              # Backup files
+*.old                 # Old files
+
+# Distribution / Packaging
+# ===============================================
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
